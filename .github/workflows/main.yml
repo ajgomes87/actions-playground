@@ -1,0 +1,33 @@
+name: "Print date workflow"
+
+on:
+  push:
+  
+jobs:
+  print_date_ubuntu:
+    name: Print Ubuntu!
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print Date Ubuntu!
+        run: date
+        
+  print_date_windows:
+    name: Print Date Windows!
+    runs-on: windows-latest
+    
+    steps:
+      - name: Print Date Windows!
+        run: date
+        
+  print_date_macos:
+    name: Print Date MacOS!
+    runs-on: macos-latest
+          
+    steps:
+      - name: Print Ubuntu latest!
+        run: date
+          needs:
+      - print_date_world_ubuntu
+      - print_date_world_windows
+      - print_date_world_macos
