@@ -27,7 +27,4 @@ jobs:
     steps:
       - name: Print Ubuntu latest!
         run: date
-          needs:
-      - print_date_world_ubuntu
-      - print_date_world_windows
-      - print_date_world_macos
+    
