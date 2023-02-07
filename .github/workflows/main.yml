@@ -23,8 +23,14 @@ jobs:
   print_date_macos:
     name: Print Date MacOS!
     runs-on: macos-latest
-          
+    
+     needs:
+      - print_date_world_ubuntu
+      - print_date_world_windows
+      - print_date_world_macos
+      
     steps:
       - name: Print Ubuntu latest!
         run: date
-    
+        
+        
